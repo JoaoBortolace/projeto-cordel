@@ -12,54 +12,85 @@
     font-weight: normal;
 }
 
-body {
-    background: lightgray;
+* {
     margin: 0px;
+    padding: 0px; 
+    font-size: 1em;
+}
+
+body {
+    background: darkgray;
+    min-height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 header {
+    display: block;
     color: white;
     background: black;
-    height: 200px;
     text-align: center;
-    font-family: PassionOne;
-    font-weight: bolder;
-    border: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
-main {
-    background: white;
-    font-family: Sriracha;
+header>h1 {
+    font-family: PassionOne;
+    font-weight: normal;
+    font-size: 10vw;
 }
 
 section {
+    background: white;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 30px;
+    line-height: 2em;
+    font-family: Sriracha;
+    font-size: 3.5vw;
+}
 
+.imagem {
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgb(0 0 0 / 47%);
+    background-color: rgb(51, 51, 51);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 #joaninha {
-    background: white url(imagens/background001.jpg) top right fixed;
-    background-size: cover;
+    background-image: url(imagens/background001.jpg);
+    background-position: right center;
 }
 
 #jornal {
-    background: white url(imagens/background002.jpg) top left fixed;
-    background-size: cover;
+    background-image: url(imagens/background002.jpg);
+    background-position: left top;
 }
 
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 1px;
+    margin-inline-end: 0px;
+    margin: 0px;
+}
 
-.normal {
-    max-width: 500px;
+section>p {
+    padding-bottom: 2em;
 }
 
 .especial {
-    color: white;
+    display: inline-block;
+    padding: 5px;
     background-color: rgba(0, 0, 0, 0.514);
+    text-shadow: 1px 1px 0px black;
 }
-
 
 a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
 a:hover {
@@ -70,5 +101,6 @@ footer {
     background-color: black;
     color: white;
     text-align: center;
-    font-size: 0.6em;
+    font-size: 1em;
+    padding: 10px;
 }
