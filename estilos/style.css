@@ -1,15 +1,11 @@
 @charset "UTF-8";
 
-@font-face {
-    font-family: 'PassionOne';
-    src: url('fontes/PassionOne-Regular.ttf');
-    font-weight: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Sriracha&display=swap');
 
-@font-face {
-    font-family: 'Sriracha';
-    src: url('fontes/Sriracha-Regular.ttf');
-    font-weight: normal;
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
 }
 
 * {
@@ -21,7 +17,7 @@
 body {
     background: darkgray;
     min-height: 100vh;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--fonte1);
 }
 
 header {
@@ -34,9 +30,21 @@ header {
 }
 
 header>h1 {
-    font-family: PassionOne;
+    font-family: var(--fonte2);
     font-weight: normal;
     font-size: 10vw;
+    font-variant: small-caps;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    font-weight: bolder;
 }
 
 section {
@@ -45,25 +53,26 @@ section {
     padding-bottom: 10vh;
     padding-left: 30px;
     line-height: 2em;
-    font-family: Sriracha;
+    font-family: var(--fonte3);
     font-size: 3.5vw;
 }
 
-.imagem {
+section.imagem {
     color: white;
     box-shadow: inset 6px 6px 13px 0px rgb(0 0 0 / 47%);
     background-color: rgb(51, 51, 51);
     background-size: cover;
     background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 #joaninha {
-    background-image: url(imagens/background001.jpg);
-    background-position: right center;
+    background-image: url('../imagens/background001.jpg');
+    background-position: center center;
 }
 
 #jornal {
-    background-image: url(imagens/background002.jpg);
+    background-image: url('../imagens/background002.jpg');
     background-position: left top;
 }
 
@@ -87,20 +96,10 @@ section>p {
     text-shadow: 1px 1px 0px black;
 }
 
-a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
 footer {
     background-color: black;
     color: white;
     text-align: center;
-    font-size: 1em;
     padding: 10px;
+    user-select: none;
 }
